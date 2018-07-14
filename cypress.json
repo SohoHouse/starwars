@@ -1,0 +1,12 @@
+{
+  "videoRecording": false,
+  "screenshotOnHeadlessFailure": true,
+  "defaultCommandTimeout": 3000,
+  "viewportWidth": 1280,
+  "viewportHeight": 800,
+  "projectId": "",
+  "fixturesFolder": "test/e2e/fixtures",
+  "integrationFolder": "test/e2e/integration",
+  "screenshotsFolder": "test/e2e/screenshots",
+  "supportFile": "test/e2e/support"
+}

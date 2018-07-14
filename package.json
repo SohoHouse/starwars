@@ -1,0 +1,115 @@
+{
+  "name": "js-test",
+  "version": "1.0.0",
+  "description": "Soho House Javascript Code Test",
+  "author": "Sam Garson <samtgarson@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "@nuxtjs/pwa": "latest",
+    "micro": "^9.1.4",
+    "morgan": "^1.9.0",
+    "morgan-json": "^1.1.0",
+    "node-async-router": "^0.0.2",
+    "nuxt": "1.4.0",
+    "nuxt-env": "^0.0.3",
+    "prom-client": "^10.2.2"  },
+  "pre-commit": [
+    "test"
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "vue",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      ".*\\.(vue)$": "vue-jest"
+    },
+    "testMatch": [
+      "**/test/unit/**/*.js"
+    ],
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "<rootDir>/test/unit/support"
+    ],
+    "browser": true,
+    "moduleDirectories": [
+      "node_modules",
+      "<rootDir>"
+    ],
+    "moduleNameMapper": {
+      "^@@/(.+)": "<rootDir>/$1",
+      "^@/(.+)": "<rootDir>/src/app/$1"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/test/unit/support/setup/index.js"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production nuxt build",
+    "dev": "nuxt",
+    "dev:api": "micro-dev ./src/api",
+    "start:test": "concurrently --names 'server,cypress' -c 'bgBlue,bgMagenta' 'yarn test:e2e --dev' 'yarn cypress open'",
+    "start": "nuxt start",
+    "test:ci": "yarn test && yarn test:e2e",
+    "test:e2e": "node ./test/e2e/support/boot",
+    "test:lint": "eslint --ignore-path .gitignore  --ext .js,.vue .",
+    "test:unit": "NODE_ENV=test jest",
+    "test:watch": "jest --watch",
+    "test": "yarn test:unit && yarn test:lint"
+  },
+  "devDependencies": {
+    "@sohohouse/eslint-config": "^0.0.1",
+    "autoprefixer": "^7.1.2",
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "babel-plugin-dynamic-import-node": "^1.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "concurrently": "^3.5.1",
+    "cypress": "^1.0.2",
+    "dotenv-safe": "^4.0.4",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-import-resolver-jest": "^2.1.1",
+    "eslint-plugin-html": "^3.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.4.1",
+    "eslint-plugin-vue": "beta",
+    "eslint": "^4.4.1",
+    "faker": "^4.1.0",
+    "jest": "^20.0.4",
+    "micro-dev": "^2.2.2",
+    "minimist": "^1.2.0",
+    "node-sass": "^4.5.3",
+    "normalize.css": "^7.0.0",
+    "pre-commit": "^1.2.2",
+    "rosie": "^1.6.0",
+    "sass-loader": "^6.0.6",
+    "vue-jest": "^1.0.3"
+  },
+  "peerDependencies": {
+    "vue": "^2.4.2",
+    "vue-router": "^2.7.0",
+    "vuex": "^2.4.0"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "env"
+        ],
+        "plugins": [
+          "dynamic-import-node",
+          "babel-plugin-transform-class-properties",
+          "babel-plugin-transform-es2015-modules-commonjs",
+          "transform-object-rest-spread"
+        ]
+      }
+    }
+  }
+}

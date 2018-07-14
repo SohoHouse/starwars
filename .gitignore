@@ -1,0 +1,30 @@
+# dependencies
+node_modules
+
+# logs
+*.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+# Intellij idea
+.idea
+*iml
+
+# VSCode
+.vscode
+
+# Generated files
+src/app/static/manifest*.json
+src/app/static/sw.js
+src/app/static/workbox-sw*
+
+# Config
+.env
+
+# Cypress output
+test/e2e/screenshots
+test/e2e/videos
