@@ -1,6 +1,6 @@
 🚀
 
-**js-test** Soho House Javascript Challenge
+**starwars** Soho House Javascript Challenge
 
 We need to build Javascript application so that our members can learn more about the important topic of the characters of Star Wars.
 
