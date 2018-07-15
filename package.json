@@ -10,7 +10,7 @@
     "morgan": "^1.9.0",
     "morgan-json": "^1.1.0",
     "node-async-router": "^0.0.2",
-    "nuxt": "1.4.0",
+    "nuxt": "1.4.1",
     "nuxt-env": "^0.0.3",
     "prom-client": "^10.2.2"  },
   "pre-commit": [

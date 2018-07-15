@@ -2788,9 +2788,9 @@ eslint-import-resolver-jest@^2.1.1:
     micromatch "^3.1.6"
     resolve "^1.5.0"
 
-"eslint-import-resolver-jest@git+https://github.com/samtgarson/eslint-import-resolver-jest.git":
+"eslint-import-resolver-jest@https://github.com/samtgarson/eslint-import-resolver-jest":
   version "1.0.0"
-  resolved "git+https://github.com/samtgarson/eslint-import-resolver-jest.git#e4a454c30fa45b86a7219852576eb1bd37721756"
+  resolved "https://github.com/samtgarson/eslint-import-resolver-jest#e4a454c30fa45b86a7219852576eb1bd37721756"
   dependencies:
     find-root "^1.0.0"
     micromatch "^2.3.11"
@@ -5632,9 +5632,9 @@ nuxt-env@^0.0.3:
   version "0.0.3"
   resolved "https://nexus.ic.sohohousedigital.com/repository/npm/nuxt-env/-/nuxt-env-0.0.3.tgz#fcd1a614c95fa0ed61adeac37d1d5e1107a57b78"
 
-nuxt@1.4.0:
-  version "1.4.0"
-  resolved "https://nexus.ic.sohohousedigital.com/repository/npm/nuxt/-/nuxt-1.4.0.tgz#66df9ede68daf2ef4cfbcc329da7dda0003e0420"
+nuxt@1.4.1:
+  version "1.4.1"
+  resolved "https://nexus.ic.sohohousedigital.com/repository/npm/nuxt/-/nuxt-1.4.1.tgz#78d268c2787b372d835511784a6af2a02ad4c5f3"
   dependencies:
     "@nuxtjs/youch" "^4.2.3"
     ansi-html "^0.0.7"
@@ -5687,7 +5687,7 @@ nuxt@1.4.0:
     upath "^1.0.2"
     url-loader "^0.6.2"
     vue "^2.5.13"
-    vue-loader "13.7.0"
+    vue-loader "^13.7.2"
     vue-meta "^1.4.3"
     vue-router "^3.0.1"
     vue-server-renderer "^2.5.13"
@@ -8355,9 +8355,9 @@ vue-jest@^1.0.3:
     tsconfig "^7.0.0"
     vue-template-es2015-compiler "^1.5.3"
 
-vue-loader@13.7.0:
-  version "13.7.0"
-  resolved "https://nexus.ic.sohohousedigital.com/repository/npm/vue-loader/-/vue-loader-13.7.0.tgz#4d6a35b169c2a0a488842fb95c85052105fa9729"
+vue-loader@^13.7.2:
+  version "13.7.2"
+  resolved "https://nexus.ic.sohohousedigital.com/repository/npm/vue-loader/-/vue-loader-13.7.2.tgz#f633f6393e905ffd730400f03c99353618c08fe8"
   dependencies:
     consolidate "^0.14.0"
     hash-sum "^1.0.2"
