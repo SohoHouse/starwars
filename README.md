@@ -1,74 +1,51 @@
 🚀
 
-**starwars** Soho House Javascript Challenge
+# Soho House Javascript Challenge
 
 We need to build Javascript application so that our members can learn more about the important topic of the characters of Star Wars.
 
 This requires an API which can serve our Star Wars data and a front end that can help us list and filter the characters.
 
+## Task Outline
 
-## Build Setup
+### Api requirements
 
-``` bash
-# install dependencies
-yarn
+The api should have two endpoints (these have been defined in `src/api/routes/characters.js`) which return data from the `src/api/data.json` file. `/characters/` should return all the characters, and `/characters/:id` should return a character with that specific id.
 
-# serve with hot reload at localhost:3000
+### Frontend requirements
+
+The frontend should have two routes - a route which lists all the characters (character list page - `/src/app/pages/characters/index.vue`), and a route which displays information on a given character (character landing page - `/src/app/pages/characters/_id.vue`). 
+
+The character list page should link each character to their specific landing page. Filtering functionality is a nice to have.
+
+## Task Notes
+
+1. We use [Nuxt](https://github.com/nuxt/nuxt.js) as a base framework. For detailed explanation on how Nuxt works, checkout the [Nuxt.js docs](https://nuxtjs.org/guide).
+2. Each file inside the `/test/unit` folder will be loaded as a test by the Jest test runner. Have a look at the [docs](https://facebook.github.io/jest/docs) for more information.
+3. We are not expecting a professional standard UI, but do make sure it is clean and consistent.
+4. Please provide the code as you would for a production app (e2e tests unnecessary).
+5. If you come across time constraints, please feel free to provide comments on anything missing.
+
+## Useful Commands
+
+### Run entire app locally
+
+Opens the app at `localhost:3000` with the api available at `localhost:3000/api`.
+
+_NOTE: The api does not hot reload with this command_
+
+```bash
 yarn dev
-
-# build for production and launch server
-yarn build
-yarn start
 ```
 
-## Nuxt
-
-We use [Nuxt](https://github.com/nuxt/nuxt.js) as a base framework. For detailed explanation on how Nuxt works, checkout the [Nuxt.js docs](https://nuxtjs.org/guide).
-
-
-## Linting
-
-We're using [ESLint](https://eslint.org/) to lint our code.
-
-### Running linter
+### Run only the api locally (with hot reload)
 
 ```bash
-yarn test:lint
+yarn dev:api
 ```
 
-## Unit Testing
-
-We're using [Jest](https://facebook.github.io/jest/) to write unit and integration tests for our components. 
-
-### Running Tests
-
-To run the unit tests you can run:
+### Run tests
 
 ```bash
-yarn test:unit
+yarn test
 ```
-
-### Integration Tests
-
-Each file inside the `/test/unit` folder will be loaded as a test by the Jest test runner. Have a look at the [docs](https://facebook.github.io/jest/docs) for more information.
-
-## End to End Testing
-
-We're using [Cypress](https://cypress.io/) to write end to end tests.
-
-### Running Tests
-
-To run the e2e tests you can run (you'll need to run a test server first):
-
-```bash
-# Run Cypress UI in development:
-yarn start:test 
-
-# Run e2e tests programmatically:
-yarn test:e2e
-```
-
-### Writing Tests
-
-Each file inside the `/test/e2e/integration` folder will be loaded as a test by the Cypress test runner. You can edit cypress.json for more fine-grained configuration—take a look at [the docs](https://docs.cypress.io/) for more information.
-

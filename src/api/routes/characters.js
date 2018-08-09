@@ -1,11 +1,11 @@
 const { send } = require('micro')
-const data = require('../data.json')
 
 const index = async (req, res) => {
   send(res, 200, [])
 }
 
-const show = async ({ params }, res) => {
+const show = async (req, res) => {
+  // req.params contains the params passed through the url
   send(res, 200, {})
 }
 
