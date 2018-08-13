@@ -24,7 +24,3 @@ src/app/static/workbox-sw*
 
 # Config
 .env
-
-# Cypress output
-test/e2e/screenshots
-test/e2e/videos

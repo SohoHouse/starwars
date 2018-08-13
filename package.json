@@ -12,7 +12,8 @@
     "node-async-router": "^0.0.2",
     "nuxt": "1.4.1",
     "nuxt-env": "^0.0.3",
-    "prom-client": "^10.2.2"  },
+    "prom-client": "^10.2.2"
+  },
   "pre-commit": [
     "test"
   ],
@@ -48,10 +49,7 @@
     "build": "NODE_ENV=production nuxt build",
     "dev": "nuxt",
     "dev:api": "micro-dev ./src/api",
-    "start:test": "concurrently --names 'server,cypress' -c 'bgBlue,bgMagenta' 'yarn test:e2e --dev' 'yarn cypress open'",
     "start": "nuxt start",
-    "test:ci": "yarn test && yarn test:e2e",
-    "test:e2e": "node ./test/e2e/support/boot",
     "test:lint": "eslint --ignore-path .gitignore  --ext .js,.vue .",
     "test:unit": "NODE_ENV=test jest",
     "test:watch": "jest --watch",
@@ -70,7 +68,6 @@
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.26.0",
     "concurrently": "^3.5.1",
-    "cypress": "^1.0.2",
     "dotenv-safe": "^4.0.4",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-import-resolver-jest": "^2.1.1",
