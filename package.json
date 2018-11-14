@@ -14,9 +14,7 @@
     "nuxt-env": "^0.0.3",
     "prom-client": "^10.2.2"
   },
-  "pre-commit": [
-    "test"
-  ],
+  "pre-commit": [],
   "jest": {
     "moduleFileExtensions": [
       "js",
