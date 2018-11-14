@@ -47,8 +47,7 @@
   },
   "scripts": {
     "build": "NODE_ENV=production nuxt build",
-    "dev": "nuxt",
-    "dev:api": "micro-dev ./src/api",
+    "dev": "nodemon --watch ./src/api --exec \"nuxt\"",
     "start": "nuxt start",
     "test:lint": "eslint --ignore-path .gitignore  --ext .js,.vue .",
     "test:unit": "NODE_ENV=test jest",
@@ -82,6 +81,7 @@
     "micro-dev": "^2.2.2",
     "minimist": "^1.2.0",
     "node-sass": "^4.5.3",
+    "nodemon": "^1.18.6",
     "normalize.css": "^7.0.0",
     "pre-commit": "^1.2.2",
     "rosie": "^1.6.0",
